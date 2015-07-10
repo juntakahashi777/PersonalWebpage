@@ -7,9 +7,14 @@
 <h4>
 	<br>
 	{% for link in links_1 %}
-	<li>{{link['url']}}</li>
+	<li>{{link['url']}}
+	<button type="submit" name="delete" onclick="window.location.href='/delete?index={{loop.index}}';">delete</button>
+	</li>
 	<br>
 	{% endfor %}
 </h4>
+<form method="post">
+<input type="text" name="url">
+</form>
 </div>
 </body>
